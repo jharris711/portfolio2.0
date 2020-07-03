@@ -1,0 +1,360 @@
+{% extends "base.html" %}
+{% load static %}
+{% load cloudinary %}
+{%  block content %}
+    <!-- Hero Section-->
+    <section id="intro" style="background: url({% static 'img/g1.gif' %})" class="hero bg-cover">
+        <div class="overlay"></div>
+        <div class="content h-100 d-flex align-items-center">
+            <div class="container text-center text-white">
+                
+                <p class="headings-font-family text-uppercase lead">Full Stack Web Development</p>
+                <h1 class="text-uppercase hero-text text-white">J. Harris<span class="font-weight-bold d-block">Web Dev</span></h1>
+                <p class="headings-font-family text-uppercase lead">E-commerce Shops / Artist Profiles / Small Business Sites</p>
+            </div>
+        </div><a href="#about" class="scroll-btn link-scroll"><i class="fas fa-angle-double-down"></i></a>
+    </section>
+    <!-- Hero Section-->
+    <!-- Navbar-->
+    <header class="header sticky-top">
+        <nav class="navbar navbar-expand-lg bg-white border-bottom py-0 shadow-sm">
+            <div class="container">
+                <h3 class="p-2 m-0"><i class="fas fa-laptop"></i> J. Harris Web Dev</h3>
+                <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><span class="fas fa-bars"></span></button>
+                <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                    <ul class="navbar-nav ml-auto px-3">
+                        <li class="nav-item active"><a href="#intro" class="nav-link text-uppercase link-scroll">Home </a></li>
+                        <li class="nav-item"><a href="#about" class="nav-link text-uppercase link-scroll">About</a></li>
+                        <li class="nav-item"><a href="#services" class="nav-link text-uppercase link-scroll">Services</a></li>
+                        <li class="nav-item"><a href="#portfolio" class="nav-link text-uppercase link-scroll">Portfolio</a></li>
+                        <li class="nav-item"><a href="#skills" class="nav-link text-uppercase link-scroll">Skills</a></li>
+                        <li class="nav-item"><a href="#social" class="nav-link text-uppercase link-scroll">Social Media</a></li>
+                        <li class="nav-item"><a href="#contact" class="nav-link text-uppercase link-scroll">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Navbar-->
+    <!-- About Section-->
+    <section id="about" class="about shadow-sm">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-6">
+                    <header class="text-center mb-5">
+                    <h2 class="lined text-uppercase mt-5">About Me</h2>
+                    </header>
+                    <p class="lead">Curating the Online Presence of Artists, Innovators, Brands, and Businesses.</p>
+                    <p>I’m <strong>Josh Harris</strong>, an <strong>experienced web designer/developer</strong> that loves what he does. I specialize in 
+                        developing <strong>simple, stylish apps</strong> with straightforward content structure and 
+                        <strong>thoughtful interactions</strong>. I code user interfaces from scratch and <strong>bring life to creative ideas</strong> 
+                        right in your browser. I'm a <strong>full-stack developer</strong> which means <strong>I do everything from design to deploy</strong>, 
+                        creating safe and secure server-side logic to smoothly integrate data with the UI. 
+                        <a href="#contact"><strong>Contact me today </strong></a>and let's work on creating a unique, 
+                        stylish online presence for you.</p>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <ul class="mb-0">
+                                <li>Custom Applications</li>
+                                <li>E-commerce Shops</li>
+                                <li>Landing Pages</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6">
+                            <ul class="mb-0">
+                                <li>Artist Profiles</li>
+                                <li>Small Business Sites</li>
+                                <li>Photography Portfolios</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6"><img src="{% static 'img/template-homepage.png' %}" alt="..." class="img-fluid mt-5 pt-4">
+                </div>
+            </div>
+            <div class="row">   
+                <div class="col-lg-6"> 
+                    <h5 class="text-uppercase font-weight-bold"><i class="fas fa-tachometer-alt mr-2"></i>Fast load times and lag-free interaction</h5>
+                    <p>Quick load times result in a comfortable browsing experience for your users.</p>
+                </div>
+                <div class="col-lg-6"> 
+                    <h5 class="text-uppercase font-weight-bold"><i class="far fa-lightbulb mr-2"></i>Intuitive applications</h5>
+                    <p>Everyone loves an easy-to-use, intuitive UX/UI.</p>
+                </div>
+                <div class="col-lg-6"> 
+                    <h5 class="text-uppercase font-weight-bold"><i class="fas fa-mobile-alt mr-2"></i>Responsive design</h5>
+                    <p>Layouts that work on any device, big or small.</p>
+                </div>
+                <div class="col-lg-6"> 
+                    <h5 class="text-uppercase font-weight-bold"><i class="fas fa-trophy mr-2"> </i>Dynamic interfaces</h5>
+                    <p>Creative ideas = unique user experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section-->
+    <!-- Hire Me -->
+    <div class="container-fluid px-5 z-depth-1 bg-gray">
+        <section class="text-center d-md-flex align-items-center justify-content-around p-5 lighten-2">
+            <h3 class="font-weight-bold mb-md-0 mb-4">Starting an e-commerce business?</h3>
+                <a href="#contact" class="btn btn-primary border-0 shadow-sm rounded text-center text-white">Hire Me!</a>
+        </section>
+    </div>
+    <!-- Hire Me -->
+    <!-- Services Section-->
+    <section id="services" class="bg-white shadow-sm">
+        <div class="container">
+            <header class="text-center mb-5">
+                <h2 class="lined text-uppercase">Services</h2>
+            </header>
+            <div class="row text-center">
+                <div class="col-lg-4">
+                    <div class="bg-light shadow-sm rounded mb-4 p-4">
+                        <div class="icon mb-3"><i class="fas fa-desktop"></i></div>
+                        <h4 class="text-uppercase font-weight-bold">Web design</h4>
+                        <p class="small text-gray">Simple, straightforward, sophisticated user experiences.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="bg-light shadow-sm rounded mb-4 p-4">
+                        <div class="icon mb-3"><i class="fas fa-shopping-cart"></i></div>
+                        <h4 class="text-uppercase font-weight-bold">eCommerce Shops</h4>
+                        <p class="small text-gray">Feature-filled online storefronts directly integrated into your website.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="bg-light shadow-sm rounded mb-4 p-4">
+                        <div class="icon mb-3"><i class="fab fa-wordpress-simple"></i></div>
+                        <h4 class="text-uppercase font-weight-bold">CMS Development</h4>
+                        <p class="small text-gray">Sites, themes and plugins for Wordpress, Squarespace, Shopify and more.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="bg-light shadow-sm rounded mb-4 p-4">
+                        <div class="icon mb-3"><i class="fab fa-searchengin"></i></div>
+                        <h4 class="text-uppercase font-weight-bold">SEO and SEM</h4>
+                        <p class="small text-gray">Send your brand to the top of the search results and dominate your market.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="bg-light shadow-sm rounded mb-4 p-4">
+                        <div class="icon mb-3"><i class="far fa-thumbs-up"></i></div>
+                        <h4 class="text-uppercase font-weight-bold">Socail Media</h4>
+                        <p class="small text-gray">Let me manage your social media or integrate it directly into your site.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="bg-light shadow-sm rounded mb-4 p-4">
+                        <div class="icon mb-3"><i class="fas fa-robot"></i></div>
+                        <h4 class="text-uppercase font-weight-bold">Bot Development</h4>
+                        <p class="small text-gray">Automated bots that can manage your Twitter feed or handle daily mundane tasks.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services Section-->
+    <!-- Hire Me -->
+    <div class="container-fluid px-5 z-depth-1 bg-gray">
+        <section class="text-center d-md-flex justify-content-around p-5 lighten-2">
+            <h3 class="font-weight-bold mb-md-0 mb-4">Need a website for your brand?</h3>
+            <a href="#contact" class="btn btn-primary border-0 shadow-sm rounded text-center text-white">Hire Me!</a>
+        </section>
+    </div>
+    <!-- Hire Me -->
+    <!-- Portfolio Section-->
+    <section id="portfolio" class="bg-white shadow-sm">
+        <header class="text-center mb-4">
+            <h2 class="lined text-uppercase mb-5">Portfolio</h2>
+            <p>Here's a chance for you to check out some of my work</p>
+        </header>
+        <div class="row p-0">
+            <div class="col card-columns">
+                {% for project in projects %}
+                <div class="card bg-light shadow-sm border-0">
+                    <img class="card-img-top shadow-sm" src="{{ project.image_url }}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary"><strong>{{ project.title }}</strong></h5>
+                        <p class="card-text">{{ project.description }}</p>
+                        <hr>
+                        <h5 class="card-title text-primary"><strong>Techs used:</strong></h5>
+                        <p>{{ project.techs }}</p>
+                        <div class="btn-group">
+                            <a href="{{ project.url }}" target="_blank" class="btn btn-primary btn-sm shadow-sm rounded mr-2"><i class="far fa-window-restore"></i> View Live</a>
+                            <a href="{{ project.github }}" target="_blank" class="btn btn-primary btn-sm shadow-sm rounded mr-2"><i class="fab fa-github"></i> View GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>          
+            
+        </div>
+    </section>
+    <!-- Portfolio Section-->
+    <!-- Hire Me -->
+    <div class="container-fluid px-5 z-depth-1 bg-gray">
+        <section class="text-center white-text d-md-flex justify-content-around p-5">
+            <h3 class="font-weight-bold mb-md-0 mb-4">Artists need a space online to show off their work.</h3>
+            <a href="#contact" class="btn btn-primary border-0 shadow-sm rounded text-center text-white">Hire Me!</a>
+        </section>
+    </div>
+    <!-- Hire Me -->
+    <!-- Skills Section-->
+    <section id="skills" class="bg-white shadow-sm">
+        <div class="container text-center mb-5 p-3">
+            <header class="text-center mb-5">
+                <h2 class="lined text-center text-uppercase mt-4">Skills</h2>
+            </header>
+            <p class="mx-auto mb-5"></p>
+            <div class="row">
+                <div class="col-md-3 mb-4 p-3 rounded bg-light shadow-sm">
+                    <i class="fas fa-pencil-ruler fa-3x mt-1"></i>
+                    <h5 class="font-weight-bold my-4 text-primary">Design</h5>
+                    <p class="mb-md-0">I create responsive, minimalist layouts and styles that showcase the important things... Your brand.</p>
+                </div>
+                <div class="col-md-3 mb-4 p-3 rounded bg-light shadow-sm">
+                    <i class="fas fa-desktop fa-3x mt-1"></i>
+                    <h5 class="font-weight-bold my-4 text-primary">Front-End</h5>
+                    <p class="mb-md-0">I use React, Angular, Bootstrap and sometimes plain HTML/CSS/JavaScript to implement the visual elements that users see and interact with.</p>
+                </div>
+                <div class="col-md-3 mb-4 p-3 rounded bg-light shadow-sm">
+                    <i class="fas fa-database fa-3x mt-1"></i>
+                    <h5 class="font-weight-bold my-4 text-primary">Back-End</h5>
+                    <p class="mb-0">I use Django, NodeJS, and Laravel to connect to databases like PostgreSQL, MongoDB, and MySQL so that data stays safe and secure.
+                    </p>
+                </div>
+                <div class="col-md-3 mb-4 p-3 rounded bg-light shadow-sm">
+                    <i class="fas fa-server fa-3x mt-1"></i>
+                    <h5 class="font-weight-bold my-4 text-primary">Deploy</h5>
+                    <p class="mb-0">I exhibit sites and apps to the world by deploying to Heroku, Wordpress, Shopify, Squarespace, and more.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Skills Section-->
+    <!-- Hire Me -->
+    <div class="container-fluid px-5 z-depth-1 bg-gray">
+        <section class="text-center white-text d-md-flex justify-content-around p-5">
+            <h3 class="font-weight-bold mb-md-0 mb-4">Start a blog on Wordpress today.</h3>
+            <a href="#contact" class="btn btn-primary border-0 shadow-sm rounded text-center text-white">Hire Me!</a>
+        </section>
+    </div>
+    <!-- Hire Me -->
+    <!-- Social Section-->
+    <section id="social" class="bg-white shadow-sm">
+        <div class="container">
+            <header class="text-center mb-5">
+                <h2 class="text-uppercase lined mt-5">Social Media</h2>
+            </header>
+            <div class="row text-center align-items-center justify-content-between">
+                <div class="col-md-6 mb-4">
+                    <div class="fb-page shadow-sm" data-href="https://www.facebook.com/jharriswebdev/" data-tabs="timeline" data-width="300" data-height="500" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/shainuabeats/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/shainuabeats/">Shainua</a></blockquote></div>
+                    <h4 class="font-weight-bold text-uppercase mt-1"><a href="#" class="no-anchor-style">Facebook</a></h4>
+                    <p class="small text-gray text-uppercase">J. Harris Web Dev</p>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <a class="twitter-timeline shadow-sm" data-width="300" data-height="500" data-theme="dark" href="https://twitter.com/jheeeeezy?ref_src=twsrc%5Etfw">Tweets by jheeeeezy</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+                    <h4 class="font-weight-bold text-uppercase"><a href="#" class="no-anchor-style">Twitter</a></h4>
+                    <p class="small text-gray text-uppercase">@jheeeeezy</p>
+                </div>
+            </div>
+            <div class="row text-center align-items-center justify-content-center mt-5">
+                <div class="col col-md-6 mb-4">
+                    {% for post in posts %}
+                    {{ post.embed|safe }}
+                    {% endfor %}
+                    <h4 class="font-weight-bold text-uppercase"><a href="#" class="no-anchor-style">Instagram</a></h4>
+                    <p class="small text-gray text-uppercase">@jharriswebdev</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Social Section-->
+    <!-- Hire Me -->
+    <div class="container-fluid z-depth-1 bg-gray">
+        <section class="text-center d-block align-items-center justify-content-around">
+            <h3 class="font-weight-bold mb-md-0 mb-4 pt-1">Check out my developer story on Stack Overflow, browse my GitHub repos, and connect with me on LinkedIn.</h3>
+            <div class="btn-group mt-3">
+                <a href="https://stackoverflow.com/story/joshharris " target="_blank" class="btn btn-primary shadow-sm rounded text-center text-white align-items-center m-2"><i class="fab fa-stack-overflow fa-2x mx-2 d-block"></i>Developer Story</a> 
+                <a href="https://github.com/jharris711" target="_blank" class="btn btn-primary shadow-sm rounded text-center text-white align-items-center m-2"><i class="fab fa-github fa-2x mx-2 d-block"></i>GitHub Repos</a> 
+                <a href="https://www.linkedin.com/in/joshsharris/" target="_blank" class="btn btn-primary shadow-sm rounded text-center text-white align-items-center m-2"><i class="fab fa-linkedin fa-2x mx-2 d-block"></i>LinkedIn Profile</a>
+            </div>
+        </section>
+    </div>
+    <!-- Hire Me -->
+    <!-- Contact Section-->
+    <section id="contact" class="bg-white shadow-sm">
+        <div class="container">
+            <header class="text-center mb-5">
+                <!-- Messages -->
+                <div>
+                    {% if messages %}
+                        {% for message in messages %}
+                        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                            {{ message }}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+                <!-- Messages -->
+            <h2 class="text-uppercase lined mt-5">Contact</h2>
+            </header>
+            <div class="row">
+                <div class="col-lg-6">
+                    <p>Need to hire a freelancer for your project? Looking for an experienced dev to add to your team? I'm available, I enjoy working on creative projects with creative people, and I would love to hear from you.</p>
+                    <ul class="m-3 p-2 list-inline text-center">
+                        <li class="list-inline-item"><a href="https://www.facebook.com/jharriswebdev" target="_blank" class="social-link social-link-facebook shadow-sm"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="list-inline-item"><a href="https://twitter.com/jheeeeezy" target="_blank" class="social-link social-link-twitter shadow-sm"><i class="fab fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.instagram.com/jharriswebdev/" target="_blank" class="social-link social-link-instagram shadow-sm"><i class="fab fa-instagram"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.linkedin.com/in/joshsharris/" target="_blank" class="social-link social-link-linkedin shadow-sm"><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 bg-light p-4 rounded shadow-sm">
+                    <form class="contact-form" method='POST'>
+                        {% csrf_token %}
+                    <div class="row">
+                        <div class="form-group col-lg-6">
+                            {{ form.name }}
+                        </div>
+                        <div class="form-group col-lg-6">
+                            {{ form.email }}
+                        </div>
+                        <div class="form-group col-lg-12">
+                            {{ form.subject }}
+                        </div>
+                        <div class="form-group col-lg-12">
+                            {{ form.message }}
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <button type="submit" class="btn btn-primary shadow-sm rounded w-100"><i class="far fa-paper-plane"></i> Send message</button>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <footer class="py-4 mb-2 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 text-center text-lg-left d-flex align-items-center justify-content-center">
+                    <p class="my-2 text-gray">&copy; 2020 J. Harris Web Development</p>
+                </div>
+                <div class="col-md d-flex button-group text-center align-items-center justify-content-center m-2">
+                    <a class="text-secondary nav-link foot-link" href="https://www.facebook.com/jharriswebdev/" target="_blank" class="mr-3" role="button"><i class="fab fa-facebook-f"></i></a>
+                    <a class="text-secondary nav-link foot-link" href="https://www.linkedin.com/in/joshsharris/" target="_blank" class="mr-3" role="button"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="text-secondary nav-link foot-link" href="https://github.com/jharris711" target="_blank" class="mr-3" role="button"><i class="fab fa-github-alt"></i></a>
+                    <a class="text-secondary nav-link foot-link" href="https://twitter.com/jheeeeezy" target="_blank" class="mr-3" role="button"><i class="fab fa-twitter"></i></a>
+                    <a class="text-secondary nav-link foot-link" href="https://stackoverflow.com/story/joshharris" target="_blank" class="mr-3" role="button"><i class="fab fa-stack-overflow"></i></a>
+                    <a class="text-secondary nav-link foot-link" href="https://www.youtube.com/channel/UCUQ-fkPVp3grr4nGWlH8ppw" target="_blank" class="mr-1" role="button"><i class="fab fa-youtube"></i></a>
+                </div>
+        
+            </div>
+        </div>
+    </footer>
+{% endblock content %}
