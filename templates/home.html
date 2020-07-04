@@ -200,27 +200,29 @@
             <h2 class="lined text-uppercase mb-5">Portfolio</h2>
             <p>Here's a chance for you to check out some of my work</p>
         </header>
-        <div class="row p-0">
-            <div class="col card-columns">
-                {% for project in projects %}
-                <div class="card bg-light shadow-sm border-0">
-                    <img class="card-img-top shadow-sm" src="{{ project.image_url }}" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title text-primary"><strong>{{ project.title }}</strong></h5>
-                        <p class="card-text">{{ project.description }}</p>
-                        <hr>
-                        <h5 class="card-title text-primary"><strong>Techs used:</strong></h5>
-                        <p>{{ project.techs }}</p>
-                        <div class="btn-group">
-                            <a href="{{ project.url }}" target="_blank" class="btn btn-primary btn-sm shadow-sm rounded mr-2"><i class="far fa-window-restore"></i> View Live</a>
-                            <a href="{{ project.github }}" target="_blank" class="btn btn-primary btn-sm shadow-sm rounded mr-2"><i class="fab fa-github"></i> View GitHub</a>
+        <div class="container p-0 justify-content-center>
+            <div class="row p-0">
+                <div class="col card-columns">
+                    {% for project in projects %}
+                    <div class="card bg-light shadow-sm border-0">
+                        <img class="card-img-top shadow-sm" src="{{ project.image_url }}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary"><strong>{{ project.title }}</strong></h5>
+                            <p class="card-text">{{ project.description }}</p>
+                            <hr>
+                            <h5 class="card-title text-primary"><strong>Techs used:</strong></h5>
+                            <p>{{ project.techs }}</p>
+                            <div class="btn-group">
+                                <a href="{{ project.url }}" target="_blank" class="btn btn-primary btn-sm shadow-sm rounded mr-2"><i class="far fa-window-restore"></i> View Live</a>
+                                <a href="{{ project.github }}" target="_blank" class="btn btn-primary btn-sm shadow-sm rounded mr-2"><i class="fab fa-github"></i> View GitHub</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                {% endfor %}
-            </div>          
-            
+                    {% endfor %}
+                </div>           
+            </div>
         </div>
+        
     </section>
     <!-- Portfolio Section-->
     <!-- Hire Me -->
