@@ -5,7 +5,7 @@
     <!-- Hero Section-->
     <section id="intro" style="background: url({% static 'img/g1.gif' %})" class="hero bg-cover">
         <div class="overlay"></div>
-        <div class="content h-100 d-flex align-items-center">
+        <div class="content h-100 d-flex align-items-center" style="overflow: hidden;">
             <div class="container text-center text-white animate__animated animate__fadeIn">
                 <div class="row">
                     <div class="col">
@@ -30,7 +30,7 @@
                 </div>               
                 <div class="row">
                     <div class="col">
-                        <div class="arrow mt-5">
+                        <div class="arrow">
                             <span></span>
                             <span></span>
                             <span></span>
@@ -210,7 +210,7 @@
                             <h5 class="card-title text-primary"><strong>{{ project.title }}</strong></h5>
                             <p class="card-text">{{ project.description }}</p>
                             <hr>
-                            <h5 class="card-title text-primary"><strong>Techs used:</strong></h5>
+                            <h5 class="card-title text-primary"><strong>I did the:</strong></h5>
                             <p>{{ project.techs }}</p>
                             <div class="btn-group">
                                 <a href="{{ project.url }}" target="_blank" class="btn btn-primary btn-sm shadow-sm rounded mr-2"><i class="far fa-window-restore"></i> View Live</a>
